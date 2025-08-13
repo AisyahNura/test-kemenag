@@ -53,4 +53,7 @@ if (is_file($viewPath)) {
   include __DIR__ . '/../app/views/404.php';
 }
 
-include __DIR__ . '/../app/views/partials/footer.php';
+// Footer hanya di halaman home
+if ($page === 'home') {
+  include __DIR__ . '/../app/views/partials/footer.php';
+}

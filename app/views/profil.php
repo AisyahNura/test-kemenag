@@ -4,32 +4,52 @@ $sub = $_GET['sub'] ?? null; // null = landing, selain itu = sub-bab
 
 <?php if ($sub === null): ?>
   <!-- LANDING: kartu pilihan sub-bab -->
-  <h1>Profil PPID</h1>
-  <div class="instansi-grid" style="margin-top:8px">
-    <a class="instansi-card" href="?page=profil&sub=tentang">
-      <div><div class="title">Tentang PPID</div><div class="sub">Ringkasan profil & mandat PPID</div></div>
-    </a>
-    <a class="instansi-card" href="?page=profil&sub=pejabat">
-      <div><div class="title">Profil Pejabat</div><div class="sub">Nama, jabatan, & kontak</div></div>
-    </a>
-    <a class="instansi-card" href="?page=profil&sub=struktur">
-      <div><div class="title">Struktur Organisasi</div><div class="sub">Bagan organisasi PPID</div></div>
-    </a>
-    <a class="instansi-card" href="?page=profil&sub=visi-misi">
-      <div><div class="title">Visi & Misi</div><div class="sub">Arah & tujuan layanan informasi</div></div>
-    </a>
-    <a class="instansi-card" href="?page=profil&sub=tugas">
-      <div><div class="title">Tugas & Fungsi</div><div class="sub">Uraian tugas & fungsi utama</div></div>
-    </a>
-  </div>
+  <section class="section-box">
+    <h2>Profil PPID</h2>
+    <div class="instansi-grid" style="margin-top:16px">
+      <a class="instansi-card" href="?page=profil&sub=tentang">
+        <div style="width:42px;height:42px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">📋</div>
+        <div>
+          <div class="title">Tentang PPID</div>
+          <div class="sub">Ringkasan profil & mandat PPID</div>
+        </div>
+      </a>
+      <a class="instansi-card" href="?page=profil&sub=pejabat">
+        <div style="width:42px;height:42px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">👤</div>
+        <div>
+          <div class="title">Profil Pejabat</div>
+          <div class="sub">Nama, jabatan, & kontak</div>
+        </div>
+      </a>
+      <a class="instansi-card" href="?page=profil&sub=struktur">
+        <div style="width:42px;height:42px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">🏗️</div>
+        <div>
+          <div class="title">Struktur Organisasi</div>
+          <div class="sub">Bagan organisasi PPID</div>
+        </div>
+      </a>
+      <a class="instansi-card" href="?page=profil&sub=visi-misi">
+        <div style="width:42px;height:42px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">🎯</div>
+        <div>
+          <div class="title">Visi & Misi</div>
+          <div class="sub">Arah & tujuan layanan informasi</div>
+        </div>
+      </a>
+      <a class="instansi-card" href="?page=profil&sub=tugas">
+        <div style="width:42px;height:42px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">⚙️</div>
+        <div>
+          <div class="title">Tugas & Fungsi</div>
+          <div class="sub">Uraian tugas & fungsi utama</div>
+        </div>
+      </a>
+    </div>
+  </section>
   <?php return; ?>
 <?php endif; ?>
 
 <!-- ================= SUB-BAB ================= -->
 
 <?php if ($sub==='tentang'): ?>
-  <h1 class="page-title">Peraturan Mengenai Keterbukaan Informasi Publik</h1>
-
   <nav class="tabs subnav" style="margin-top:8px">
     <a href="?page=profil&sub=tentang" class="active">Tentang PPID</a>
     <a href="?page=profil&sub=pejabat">Profil Pejabat</a>
@@ -72,7 +92,6 @@ $sub = $_GET['sub'] ?? null; // null = landing, selain itu = sub-bab
   </section>
 
 <?php elseif ($sub==='pejabat'): ?>
-  <h1 class="page-title">Profil Pejabat</h1>
   <nav class="tabs subnav" style="margin-top:8px">
     <a href="?page=profil&sub=tentang">Tentang PPID</a>
     <a href="?page=profil&sub=pejabat" class="active">Profil Pejabat</a>
@@ -133,7 +152,6 @@ $sub = $_GET['sub'] ?? null; // null = landing, selain itu = sub-bab
 
 
   <?php elseif ($sub==='visi-misi'): ?>
-  <h1 class="page-title">Visi & Misi</h1>
   <nav class="tabs subnav" style="margin-top:8px">
     <a href="?page=profil&sub=tentang">Tentang PPID</a>
     <a href="?page=profil&sub=pejabat">Profil Pejabat</a>
@@ -167,7 +185,6 @@ $sub = $_GET['sub'] ?? null; // null = landing, selain itu = sub-bab
 
 
 <?php elseif ($sub==='struktur'): ?>
-  <h1 class="page-title">Struktur Organisasi</h1>
   <nav class="tabs subnav" style="margin-top:8px">
     <a href="?page=profil&sub=tentang">Tentang PPID</a>
     <a href="?page=profil&sub=pejabat">Profil Pejabat</a>
@@ -185,7 +202,6 @@ $sub = $_GET['sub'] ?? null; // null = landing, selain itu = sub-bab
   </section>
 
 <?php else: /* tugas */ ?>
-  <h1 class="page-title">Tugas & Fungsi</h1>
   <nav class="tabs subnav" style="margin-top:8px">
     <a href="?page=profil&sub=tentang">Tentang PPID</a>
     <a href="?page=profil&sub=pejabat">Profil Pejabat</a>

@@ -2,33 +2,34 @@
 $jenis = $_GET['jenis'] ?? null;
 ?>
 
-<h1>Informasi Publik</h1>
-
 <?php if ($jenis === null): ?>
   <!-- LANDING: pilih jenis informasi -->
-  <div class="instansi-grid" style="margin-top:8px">
-    <a class="instansi-card" href="?page=informasi&jenis=berkala">
-      <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📅</div>
-      <div>
-        <div class="title">Informasi Berkala</div>
-        <div class="sub">Informasi yang diumumkan secara berkala setiap 6 bulan</div>
-      </div>
-    </a>
-    <a class="instansi-card" href="?page=informasi&jenis=serta_merta">
-      <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">🚨</div>
-      <div>
-        <div class="title">Informasi Serta Merta</div>
-        <div class="sub">Informasi yang dapat membahayakan hajat hidup orang banyak</div>
-      </div>
-    </a>
-    <a class="instansi-card" href="?page=informasi&jenis=setiap_saat">
-      <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">🔍</div>
-      <div>
-        <div class="title">Informasi Setiap Saat</div>
-        <div class="sub">Informasi yang dapat diakses setiap saat</div>
-      </div>
-    </a>
-  </div>
+  <section class="section-box">
+    <h2>Informasi Publik</h2>
+    <div class="instansi-grid" style="margin-top:16px">
+      <a class="instansi-card" href="?page=informasi&jenis=berkala">
+        <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📅</div>
+        <div>
+          <div class="title">Informasi Berkala</div>
+          <div class="sub">Informasi yang diumumkan secara berkala setiap 6 bulan</div>
+        </div>
+      </a>
+      <a class="instansi-card" href="?page=informasi&jenis=serta_merta">
+        <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">🚨</div>
+        <div>
+          <div class="title">Informasi Serta Merta</div>
+          <div class="sub">Informasi yang dapat membahayakan hajat hidup orang banyak</div>
+        </div>
+      </a>
+      <a class="instansi-card" href="?page=informasi&jenis=setiap_saat">
+        <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">🔍</div>
+        <div>
+          <div class="title">Informasi Setiap Saat</div>
+          <div class="sub">Informasi yang dapat diakses setiap saat</div>
+        </div>
+      </a>
+    </div>
+  </section>
   <?php return; ?>
 <?php endif; ?>
 
@@ -41,7 +42,6 @@ $jenis = $_GET['jenis'] ?? null;
 
 <?php if ($jenis==='berkala'): ?>
   <section class="card">
-    <h2>Informasi Berkala</h2>
     <p>Informasi yang diumumkan secara berkala setiap 6 bulan sekali sesuai dengan Undang-Undang Keterbukaan Informasi Publik.</p>
     
     <div class="doc-list">
@@ -85,7 +85,6 @@ $jenis = $_GET['jenis'] ?? null;
 
 <?php elseif ($jenis==='serta_merta'): ?>
   <section class="card">
-    <h2>Informasi Serta Merta</h2>
     <p>Informasi yang dapat membahayakan hajat hidup orang banyak dan kesejahteraan masyarakat yang harus diumumkan secara serta merta.</p>
     
     <div class="doc-list">
@@ -120,7 +119,6 @@ $jenis = $_GET['jenis'] ?? null;
 
 <?php elseif ($jenis==='setiap_saat'): ?>
   <section class="card">
-    <h2>Informasi Setiap Saat</h2>
     <p>Informasi yang dapat diakses setiap saat dan selalu tersedia untuk masyarakat.</p>
     
     <div class="doc-list">

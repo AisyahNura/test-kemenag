@@ -78,6 +78,7 @@
             <a href="?page=standar&sub=biaya" class="<?= ($currPage==='standar' && $currSub==='biaya') ? 'active' : '' ?>">Biaya/Tarif Layanan</a>
             <a href="?page=standar&sub=standar-layanan" class="<?= ($currPage==='standar' && $currSub==='standar-layanan') ? 'active' : '' ?>">Standar Layanan</a>
             <a href="?page=standar&sub=kebijakan" class="<?= ($currPage==='standar' && $currSub==='kebijakan') ? 'active' : '' ?>">Arah Kebijakan Layanan</a>
+            <a href="?page=standar&sub=maklumat" class="<?= ($currPage==='standar' && $currSub==='maklumat') ? 'active' : '' ?>">Maklumat Pelayanan</a>
           </div>
         </div>
 

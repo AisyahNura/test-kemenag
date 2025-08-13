@@ -3,7 +3,7 @@
 
 <footer class="site-footer">
     <div class="container">
-        <p>&copy; 2025 PPID Kemenag Jatim (Demo)</p>
+        <p>&copy; 2025 PPID</p>
     </div>
 </footer>
 
