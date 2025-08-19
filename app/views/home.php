@@ -1,10 +1,15 @@
-<?php // app/views/home.php ?>
-<section class="hero">
-  <div class="hero-text">
-    <p class="hero-title">Layanan Informasi dan<br>Dokumentasi Publik PPID</p>
-    <p class="hero-sub">KANWIL KEMENAG PROV. JAWA TIMUR</p>
-  </div>
-  <img class="hero-illustration" src="<?= asset('img/person.svg') ?>" alt="Ilustrasi petugas PPID">
+<?php /* app/views/home.php */ ?>
+
+<!-- HERO: foto dipasang via <img>, bukan di CSS -->
+<section class="hero-banner">
+  <!-- foto background -->
+  <img class="hero-bgimg" src="<?= asset('img/ptsp.jpg') ?>" alt="Foto PTSP Kemenag Jombang">
+
+  <!-- teks di atas foto 
+  <div class="hero-overlay">
+    <h1 class="hero-title">PPID KEMENAG</h1>
+    <p class="hero-sub">JOMBANG</p>
+  </div> -->
 </section>
 
 <div class="ticker" role="region" aria-label="Pengumuman">

@@ -209,23 +209,37 @@ $sub = $_GET['sub'] ?? null; // null = landing, selain itu = sub-bab
     <a href="?page=profil&sub=struktur">Struktur Organisasi</a>
     <a href="?page=profil&sub=tugas" class="active">Tugas & Fungsi</a>
   </nav>
+
   <section class="columns-2">
     <div class="card">
       <h2>Tugas</h2>
       <ul class="list">
-        <li>Menyimpan dan mendokumentasikan informasi publik</li>
-        <li>Menyediakan dan melayani permintaan informasi publik</li>
-        <li>Menyusun & memperbarui daftar informasi publik</li>
-        <li>Mengkoordinasikan penyediaan dan pelayanan informasi publik</li>
+        <li>Menyediakan dan mengamankan Informasi Publik.</li>
+        <li>Memberikan pelayanan Informasi Publik yang cepat, tepat, dan sederhana.</li>
+        <li>Menyusun SOP pelaksanaan tugas dan kewenangan PPID serta penyebarluasan Informasi Publik.</li>
+        <li>Melakukan pengumpulan seluruh Informasi Publik yang meliputi:
+          informasi yang wajib diumumkan secara berkala, serta-merta, dan setiap saat.</li>
+        <li>Melakukan pengumpulan Informasi Publik yang dikecualikan.</li>
+        <li>Melakukan pengumuman Informasi Publik melalui media yang efektif dan efisien.</li>
+        <li>Menyampaikan Informasi Publik dalam bahasa Indonesia yang baik, benar, dan mudah dipahami.</li>
+        <li>Memenuhi permohonan Informasi Publik yang dapat diakses oleh publik.</li>
+        <li>Menetapkan dan menugaskan petugas layanan informasi untuk pelaksanaan layanan.</li>
+        <li>Mengembangkan kompetensi petugas layanan informasi.</li>
+        <li>Menyediakan sarana/prasarana layanan informasi yang didukung teknologi untuk layanan cepat dan tepat waktu.</li>
       </ul>
     </div>
+
     <div class="card">
       <h2>Fungsi</h2>
       <ul class="list">
-        <li>Pengelolaan informasi publik secara sistematis</li>
-        <li>Pelayanan informasi publik yang cepat dan akurat</li>
-        <li>Pengawasan & evaluasi pelayanan informasi</li>
-        <li>Peningkatan kapasitas SDM pengelola informasi</li>
+        <li>Koordinasi pengelolaan dan pendokumentasian Informasi Publik pada satuan kerja.</li>
+        <li>Penyediaan, pendistribusian, dan/atau publikasi Informasi Publik.</li>
+        <li>Verifikasi dan validasi informasi sebelum dipublikasikan.</li>
+        <li>Perlindungan Informasi Publik yang dikecualikan sesuai ketentuan.</li>
+        <li>Penyelenggaraan layanan permohonan, keberatan, dan dukungan penyelesaian sengketa informasi.</li>
+      <li>Pembinaan, monitoring, dan evaluasi layanan informasi di lingkungan unit kerja.</li>
+        <li>Penyusunan dan pemutakhiran DIP (Daftar Informasi Publik) dan DIK (Daftar Informasi Dikecualikan).</li>
+        <li>Penyusunan laporan layanan Informasi Publik secara berkala.</li>
       </ul>
     </div>
   </section>

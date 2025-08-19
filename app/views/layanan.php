@@ -3,104 +3,95 @@ $sub = $_GET['sub'] ?? null;
 ?>
 
 <?php if ($sub === null): ?>
-  <!-- LANDING: pilih sub-bab -->
-  <div class="instansi-grid" style="margin-top: 16px;">
-  <a class="instansi-card" href="?page=layanan&sub=permohonan">
-    <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📝</div>
-    <div>
-      <div class="title">Permohonan Informasi</div>
-      <div class="sub">Formulir pengajuan permohonan informasi publik</div>
+  <!-- LANDING: samakan gaya dengan Standar Layanan -->
+  <section class="section-box">
+    <h2>Layanan Informasi</h2>
+
+    <div class="instansi-grid" style="margin-top:16px">
+      <a class="instansi-card" href="?page=layanan&sub=permohonan">
+        <div>📝</div>
+        <div>
+          <div class="title">Permohonan Informasi</div>
+          <div class="sub">Formulir pengajuan permohonan informasi publik</div>
+        </div>
+      </a>
+
+      <a class="instansi-card" href="?page=layanan&sub=keberatan">
+        <div>⚠️</div>
+        <div>
+          <div class="title">Pengajuan Keberatan</div>
+          <div class="sub">Pengajuan keberatan atas penolakan informasi</div>
+        </div>
+      </a>
+
+      <a class="instansi-card" href="?page=layanan&sub=sengketa">
+        <div>⚖️</div>
+        <div>
+          <div class="title">Penyelesaian Sengketa</div>
+          <div class="sub">Mekanisme penyelesaian sengketa informasi</div>
+        </div>
+      </a>
+
+      <a class="instansi-card" href="?page=layanan&sub=sop">
+        <div>📋</div>
+        <div>
+          <div class="title">SOP Layanan Informasi</div>
+          <div class="sub">Standar Operasional Prosedur layanan</div>
+        </div>
+      </a>
+
+      <a class="instansi-card" href="?page=layanan&sub=standar">
+        <div>📢</div>
+        <div>
+          <div class="title">Standar Pengumuman Informasi</div>
+          <div class="sub">Standar dan format pengumuman informasi</div>
+        </div>
+      </a>
+
+      <a class="instansi-card" href="?page=layanan&sub=pengaduan">
+        <div>📞</div>
+        <div>
+          <div class="title">Tata Cara Pengaduan Masyarakat</div>
+          <div class="sub">Prosedur dan mekanisme pengaduan</div>
+        </div>
+      </a>
+
+      <a class="instansi-card" href="?page=layanan&sub=alasan">
+        <div>❓</div>
+        <div>
+          <div class="title">Alasan Pengajuan Keberatan</div>
+          <div class="sub">Dasar dan alasan yang dapat diajukan keberatan</div>
+        </div>
+      </a>
     </div>
-  </a>
-  <a class="instansi-card" href="?page=layanan&sub=keberatan">
-    <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">⚠️</div>
-    <div>
-      <div class="title">Pengajuan Keberatan</div>
-      <div class="sub">Pengajuan keberatan atas penolakan informasi</div>
-    </div>
-  </a>
-  <a class="instansi-card" href="?page=layanan&sub=sengketa">
-    <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">⚖️</div>
-    <div>
-      <div class="title">Penyelesaian Sengketa</div>
-      <div class="sub">Mekanisme penyelesaian sengketa informasi</div>
-    </div>
-  </a>
-  <a class="instansi-card" href="?page=layanan&sub=sop">
-    <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📋</div>
-    <div>
-      <div class="title">SOP Layanan Informasi</div>
-      <div class="sub">Standar Operasional Prosedur layanan</div>
-    </div>
-  </a>
-  <a class="instansi-card" href="?page=layanan&sub=standar">
-    <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📢</div>
-    <div>
-      <div class="title">Standar Pengumuman Informasi</div>
-      <div class="sub">Standar dan format pengumuman informasi</div>
-    </div>
-  </a>
-  <a class="instansi-card" href="?page=layanan&sub=pengaduan">
-    <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📞</div>
-    <div>
-      <div class="title">Tata Cara Pengaduan Masyarakat</div>
-      <div class="sub">Prosedur dan mekanisme pengaduan</div>
-    </div>
-  </a>
-  <a class="instansi-card" href="?page=layanan&sub=alasan">
-    <div style="width: 42px; height: 42px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">❓</div>
-    <div>
-      <div class="title">Alasan Pengajuan Keberatan</div>
-      <div class="sub">Dasar dan alasan yang dapat diajukan keberatan</div>
-    </div>
-  </a>
-</div>
-<?php return; ?>
+  </section>
+  <?php return; ?>
 <?php endif; ?>
 
 <!-- SUB-BAB: tabs + konten -->
 <nav class="tabs subnav" style="margin-top:8px">
   <a href="?page=layanan&sub=permohonan" class="<?= $sub==='permohonan'?'active':'' ?>">Permohonan Informasi</a>
-  <a href="?page=layanan&sub=keberatan" class="<?= $sub==='keberatan'?'active':'' ?>">Pengajuan Keberatan</a>
-  <a href="?page=layanan&sub=sengketa" class="<?= $sub==='sengketa'?'active':'' ?>">Penyelesaian Sengketa</a>
-  <a href="?page=layanan&sub=sop" class="<?= $sub==='sop'?'active':'' ?>">SOP Layanan</a>
-  <a href="?page=layanan&sub=standar" class="<?= $sub==='standar'?'active':'' ?>">Standar Pengumuman</a>
-  <a href="?page=layanan&sub=pengaduan" class="<?= $sub==='pengaduan'?'active':'' ?>">Pengaduan Masyarakat</a>
-  <a href="?page=layanan&sub=alasan" class="<?= $sub==='alasan'?'active':'' ?>">Alasan Keberatan</a>
+  <a href="?page=layanan&sub=keberatan"  class="<?= $sub==='keberatan'?'active':'' ?>">Pengajuan Keberatan</a>
+  <a href="?page=layanan&sub=sengketa"   class="<?= $sub==='sengketa'?'active':'' ?>">Penyelesaian Sengketa</a>
+  <a href="?page=layanan&sub=sop"        class="<?= $sub==='sop'?'active':'' ?>">SOP Layanan</a>
+  <a href="?page=layanan&sub=standar"    class="<?= $sub==='standar'?'active':'' ?>">Standar Pengumuman</a>
+  <a href="?page=layanan&sub=pengaduan"  class="<?= $sub==='pengaduan'?'active':'' ?>">Pengaduan Masyarakat</a>
+  <a href="?page=layanan&sub=alasan"     class="<?= $sub==='alasan'?'active':'' ?>">Alasan Keberatan</a>
 </nav>
 
 <?php if ($sub==='permohonan'): ?>
   <section class="card">
     <p>Silakan isi formulir di bawah ini untuk mengajukan permohonan informasi publik:</p>
-    
     <form class="form" action="#" method="POST">
       <div class="row">
-        <label>
-          Nama Lengkap *
-          <input type="text" name="nama" required>
-        </label>
-        <label>
-          Email *
-          <input type="email" name="email" required>
-        </label>
+        <label>Nama Lengkap *<input type="text" name="nama" required></label>
+        <label>Email *<input type="email" name="email" required></label>
       </div>
-      
       <div class="row">
-        <label>
-          No. Telepon
-          <input type="tel" name="telepon">
-        </label>
-        <label>
-          Instansi/Organisasi
-          <input type="text" name="instansi">
-        </label>
+        <label>No. Telepon<input type="tel" name="telepon"></label>
+        <label>Instansi/Organisasi<input type="text" name="instansi"></label>
       </div>
-      
-      <label>
-        Alamat Lengkap
-        <textarea name="alamat" rows="3"></textarea>
-      </label>
-      
+      <label>Alamat Lengkap<textarea name="alamat" rows="3"></textarea></label>
       <label>
         Jenis Informasi yang Diminta *
         <select name="jenis_info" required>
@@ -110,18 +101,12 @@ $sub = $_GET['sub'] ?? null;
           <option value="setiap_saat">Informasi Setiap Saat</option>
         </select>
       </label>
-      
       <label>
         Rincian Informasi yang Diminta *
         <textarea name="rincian" rows="5" required placeholder="Jelaskan secara detail informasi yang Anda butuhkan..."></textarea>
         <div class="help">Berikan penjelasan yang jelas dan spesifik agar kami dapat membantu dengan tepat</div>
       </label>
-      
-      <label>
-        Tujuan Penggunaan Informasi
-        <textarea name="tujuan" rows="3" placeholder="Untuk apa informasi tersebut akan digunakan?"></textarea>
-      </label>
-      
+      <label>Tujuan Penggunaan Informasi<textarea name="tujuan" rows="3" placeholder="Untuk apa informasi tersebut akan digunakan?"></textarea></label>
       <div class="actions">
         <button type="submit" class="btn btn-primary">Kirim Permohonan</button>
         <button type="reset" class="btn btn-outline">Reset Form</button>
@@ -132,29 +117,13 @@ $sub = $_GET['sub'] ?? null;
 <?php elseif ($sub==='keberatan'): ?>
   <section class="card">
     <p>Jika permohonan informasi Anda ditolak atau tidak ditanggapi, Anda dapat mengajukan keberatan melalui formulir ini:</p>
-    
     <form class="form" action="#" method="POST">
       <div class="row">
-        <label>
-          Nomor Permohonan Sebelumnya *
-          <input type="text" name="nomor_permohonan" required>
-        </label>
-        <label>
-          Tanggal Penolakan *
-          <input type="date" name="tanggal_penolakan" required>
-        </label>
+        <label>Nomor Permohonan Sebelumnya *<input type="text" name="nomor_permohonan" required></label>
+        <label>Tanggal Penolakan *<input type="date" name="tanggal_penolakan" required></label>
       </div>
-      
-      <label>
-        Alasan Penolakan yang Diterima
-        <textarea name="alasan_penolakan" rows="3" required></textarea>
-      </label>
-      
-      <label>
-        Alasan Keberatan *
-        <textarea name="alasan_keberatan" rows="5" required placeholder="Jelaskan mengapa Anda keberatan dengan penolakan tersebut..."></textarea>
-      </label>
-      
+      <label>Alasan Penolakan yang Diterima<textarea name="alasan_penolakan" rows="3" required></textarea></label>
+      <label>Alasan Keberatan *<textarea name="alasan_keberatan" rows="5" required placeholder="Jelaskan mengapa Anda keberatan dengan penolakan tersebut..."></textarea></label>
       <div class="actions">
         <button type="submit" class="btn btn-primary">Ajukan Keberatan</button>
         <button type="reset" class="btn btn-outline">Reset Form</button>
@@ -173,7 +142,6 @@ $sub = $_GET['sub'] ?? null;
         <li>Keputusan final Komisi Informasi</li>
       </ol>
     </div>
-    
     <div class="card">
       <p><strong>Alamat:</strong><br>
       Komisi Informasi Provinsi Jawa Timur<br>
@@ -190,14 +158,12 @@ $sub = $_GET['sub'] ?? null;
       <li>Diverifikasi kelengkapan data dalam 1x24 jam</li>
       <li>Jika tidak lengkap, permohonan dikembalikan untuk dilengkapi</li>
     </ul>
-    
     <h3>2. Proses Pencarian Informasi</h3>
     <ul class="list">
       <li>PPID mencari informasi yang diminta</li>
       <li>Waktu maksimal 10 hari kerja</li>
       <li>Jika diperlukan perpanjangan, pemberitahuan maksimal 7 hari</li>
     </ul>
-    
     <h3>3. Penyediaan Informasi</h3>
     <ul class="list">
       <li>Informasi disediakan sesuai format yang diminta</li>
@@ -215,7 +181,6 @@ $sub = $_GET['sub'] ?? null;
       <li>Isi pengumuman yang lengkap dan mudah dipahami</li>
       <li>Kontak untuk informasi lebih lanjut</li>
     </ul>
-    
     <h3>Media Pengumuman</h3>
     <ul class="list">
       <li>Website resmi PPID</li>
@@ -223,7 +188,6 @@ $sub = $_GET['sub'] ?? null;
       <li>Media sosial resmi</li>
       <li>Surat kabar lokal (untuk informasi penting)</li>
     </ul>
-    
     <h3>Jadwal Pengumuman</h3>
     <ul class="list">
       <li>Informasi berkala: setiap bulan</li>
@@ -241,7 +205,6 @@ $sub = $_GET['sub'] ?? null;
       <li>Pengaduan tertulis disampaikan dengan identitas lengkap</li>
       <li>Pengaduan anonim tidak akan diproses</li>
     </ol>
-    
     <h3>Informasi yang Harus Disertakan</h3>
     <ul class="list">
       <li>Nama dan alamat lengkap pengadu</li>
@@ -249,7 +212,6 @@ $sub = $_GET['sub'] ?? null;
       <li>Uraian singkat masalah yang diadukan</li>
       <li>Bukti pendukung (jika ada)</li>
     </ul>
-    
     <h3>Proses Penanganan</h3>
     <ul class="list">
       <li>Pengaduan diterima dan dicatat</li>
@@ -263,7 +225,6 @@ $sub = $_GET['sub'] ?? null;
   <section class="card">
     <h3>Dasar Pengajuan Keberatan</h3>
     <p>Keberatan dapat diajukan berdasarkan alasan-alasan berikut:</p>
-    
     <h3>1. Penolakan Permohonan Informasi</h3>
     <ul class="list">
       <li>Informasi tidak ditemukan</li>
@@ -271,33 +232,26 @@ $sub = $_GET['sub'] ?? null;
       <li>Permohonan tidak lengkap</li>
       <li>Biaya yang tidak wajar</li>
     </ul>
-    
     <h3>2. Keterlambatan Penyediaan Informasi</h3>
     <ul class="list">
       <li>Melebihi batas waktu yang ditentukan</li>
       <li>Tidak ada pemberitahuan perpanjangan</li>
       <li>Penundaan tanpa alasan yang jelas</li>
     </ul>
-    
     <h3>3. Kualitas Informasi</h3>
     <ul class="list">
       <li>Informasi tidak lengkap</li>
       <li>Format tidak sesuai permintaan</li>
       <li>Informasi tidak akurat</li>
     </ul>
-    
     <h3>4. Pelayanan yang Tidak Memuaskan</h3>
     <ul class="list">
       <li>Petugas tidak ramah</li>
       <li>Fasilitas tidak memadai</li>
       <li>Prosedur yang berbelit</li>
     </ul>
-    
     <div class="alert alert-info">
       <strong>Catatan:</strong> Keberatan harus diajukan dalam waktu maksimal 30 hari kerja sejak penolakan atau keterlambatan.
     </div>
   </section>
-
-
-
 <?php endif; ?>

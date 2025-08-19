@@ -117,42 +117,36 @@ $sub = $_GET['sub'] ?? null;
 
 
 <?php elseif ($sub==='standar-layanan'): ?>
-  <section class="card">
-    <h3>Indikator Kualitas Layanan</h3>
-    <div class="columns-2">
-      <div>
-        <h4>Ketepatan Waktu</h4>
-        <ul class="list">
-          <li>Informasi berkala: 100% tepat waktu</li>
-          <li>Informasi serta merta: ≤ 2x24 jam</li>
-          <li>Informasi setiap saat: ≤ 10 hari kerja</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Akurasi Informasi</h4>
-        <ul class="list">
-          <li>100% informasi yang akurat</li>
-          <li>Update berkala setiap bulan</li>
-          <li>Verifikasi data sebelum publikasi</li>
-        </ul>
-      </div>
+<?php
+  // === Lampiran PDF Standar Layanan ===
+  // Pakai NAMA FILE yang ada di folder /public/assets/file
+  $pdfName = 'Standar Pelayanan 2024.pdf'; // <-- ganti kalau beda
+  $pdfFs   = __DIR__ . '/../../public/assets/file/' . $pdfName; // path di server
+  $pdfUrl  = asset('file/' . rawurlencode($pdfName));          // URL untuk browser
+?>
+
+<div class="std-section">
+  <h3>Lampiran Dokumen</h3>
+
+  <?php if (file_exists($pdfFs) && is_file($pdfFs)): ?>
+    <div class="meta-right" style="margin-bottom:8px; gap:8px;">
+      <a class="btn btn-outline" target="_blank" rel="noopener" href="<?= $pdfUrl ?>">Buka di Tab Baru</a>
+      <a class="btn btn-primary" download href="<?= $pdfUrl ?>">Unduh PDF</a>
     </div>
 
-    <h3>Standar Pelayanan</h3>
-    <ul class="list">
-      <li><strong>Ramah:</strong> Petugas harus sopan dan membantu</li>
-      <li><strong>Cepat:</strong> Respon maksimal 1x24 jam</li>
-      <li><strong>Tepat:</strong> Informasi sesuai permintaan</li>
-      <li><strong>Lengkap:</strong> Data yang diminta tersedia</li>
-    </ul>
+    <!-- Pratinjau PDF -->
+    <iframe
+      src="<?= $pdfUrl ?>#view=FitH"
+      style="width:100%;height:720px;border:1px solid var(--line);border-radius:12px"
+    ></iframe>
+  <?php else: ?>
+    <p class="muted">
+      File <code><?= htmlspecialchars($pdfName) ?></code> belum ditemukan di folder
+      <code>/public/assets/file</code>.
+    </p>
+  <?php endif; ?>
+</div>
 
-    <h3>Komitmen Layanan</h3>
-    <ul class="list">
-      <li>Memberikan pelayanan terbaik kepada masyarakat</li>
-      <li>Mengutamakan kepentingan publik</li>
-      <li>Transparan dalam setiap proses</li>
-      <li>Bertanggung jawab atas setiap layanan</li>
-    </ul>
   </section>
 
 <?php elseif ($sub==='kebijakan'): ?>

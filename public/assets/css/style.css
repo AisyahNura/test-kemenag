@@ -567,3 +567,67 @@ section.section-box h2 {
   .vimi-quote{font-size:18px}
   .misi-list li{padding-left:52px}
 }
+/* ===== Hero Banner (pakai <img> di home) ===== */
+.hero-banner{
+  position: relative;
+  height: 420px;                 /* bebas: 380–520 */
+  overflow: hidden;              /* penting agar gambar tidak “tumpah” */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  border-radius: 0;              /* kalau mau rounded: 16px */
+}
+
+/* gambar sebagai “background” */
+.hero-banner .hero-bgimg{
+  position: absolute;
+  inset: 0;                      /* top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* auto crop rapi */
+  object-position: center;       /* ubah fokus jika perlu */
+  z-index: 1;
+}
+
+/* overlay gelap supaya teks kebaca */
+.hero-banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.45);   /* atur 0.30–0.60 sesuai kontras foto */
+  z-index: 2;
+}
+
+/* wadah teks di atas overlay */
+.hero-overlay{
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+}
+
+/* judul & sub mengikuti font situsmu */
+.hero-title{
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  color:#e5e7eb;
+}
+.hero-sub{
+  display: inline-block;
+  margin: 0;
+  background: #ffd977;
+  color: #1a2a2a;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* responsive */
+@media (max-width: 768px){
+  .hero-banner{ height: 300px; }
+  .hero-title{ font-size: 32px; }
+  .hero-sub{ font-size: 16px; }
+}
