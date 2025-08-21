@@ -14,12 +14,37 @@
 </head>
 <body>
 <?php
+  // zona waktu & helper tanggal Indonesia
+  date_default_timezone_set('Asia/Jakarta');
+  function indo_date(?DateTime $dt=null): string {
+    $dt = $dt ?: new DateTime('now');
+    $hari  = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+    $bulan = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+    return $hari[(int)$dt->format('w')] . ', ' . $dt->format('j') . ' ' . $bulan[(int)$dt->format('n')-1] . ' ' . $dt->format('Y');
+  }
+
   // variabel penanda halaman/ sub-halaman
   $currPage  = $_GET['page']  ?? 'home';
   $currSub   = $_GET['sub']   ?? null;      // untuk PROFIL & LAYANAN
   $currJenis = $_GET['jenis'] ?? null;      // untuk INFORMASI PUBLIK
 ?>
-<header class="topbar">
+
+<!-- ===== Info bar biru (tanggal & jam) ===== -->
+<div class="info-bar">
+  <div class="container">
+    <div class="info-left">
+      <span id="infobar-date"><?= indo_date() ?></span>
+      <span class="info-sep">•</span>
+      <span id="infobar-time"><?= date('H:i') ?> WIB</span>
+    </div>
+    <div class="info-right">
+      <!-- opsional: tautan cepat; boleh dikosongkan -->
+      <!-- <a class="info-link" href="?page=home">Beranda</a> -->
+    </div>
+  </div>
+</div>
+
+<header class="topbar topbar">
   <div class="container">
     <div class="header-inner">
       <a class="brand" href="?page=home">
@@ -82,7 +107,6 @@
           </div>
         </div>
 
-
       </nav>
     </div>
   </div>
@@ -90,7 +114,20 @@
 
 <!-- buka <main> di header, tutupnya di footer.php -->
 <main class="container" style="margin-top:20px;">
+
 <script>
-  // fallback JS untuk tombol menu mobile
+  // toggle menu mobile
   function toggleNav(){ document.getElementById('mainnav').classList.toggle('open'); }
+
+  // update jam di info-bar setiap 30 detik
+  (function(){
+    var el = document.getElementById('infobar-time');
+    if(!el) return;
+    function two(n){return n<10?'0'+n:n;}
+    function tick(){
+      var d=new Date();
+      el.textContent = two(d.getHours())+':'+two(d.getMinutes())+' WIB';
+    }
+    setInterval(tick,30000);
+  })();
 </script>

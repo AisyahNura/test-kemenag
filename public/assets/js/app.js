@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const duration = Math.max(20, Math.min(60, contentWidth / speedPxPerSec));
   track.style.setProperty('--ticker-duration', `${duration}s`);
 });
+
+
+// Jam di info bar (update setiap 30 detik)
+(function(){
+  var el = document.getElementById('infobar-time');
+  if(!el) return;
+  function two(n){ return n<10 ? '0'+n : n; }
+  function tick(){
+    var d = new Date();
+    el.textContent = two(d.getHours())+':'+two(d.getMinutes())+' WIB';
+  }
+  tick();
+  setInterval(tick, 30000);
+})();
