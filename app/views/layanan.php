@@ -116,41 +116,33 @@ $sub = $_GET['sub'] ?? null;
 
 <?php elseif ($sub==='keberatan'): ?>
   <section class="card">
-    <h3>Tata Cara Pengajuan Keberatan</h3>
+    <h3 style="color: #495057; margin-bottom: 16px;">Tata Cara Pengajuan Keberatan</h3>
 
-    <div class="steps-grid">
-      <!-- STEP 1 -->
-      <div class="step-card">
-        <span class="step-num">1</span>
-        <h4 class="step-title">Ajukan Keberatan</h4>
-        <p class="step-desc">
-          Melalui website ..............................., surat, email, telepon, atau datang langsung ke PTSP
-          Kemenag Jombang.
+    <div class="steps-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 100%;">
+      <!-- STEP 1 --> 
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #0ea5a3 0%, #0b7a79 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(14,165,163,0.3);">1</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Ajukan Keberatan</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Melalui website, surat, email, telepon, atau datang langsung ke PTSP Kemenag Jombang.
         </p>
       </div>
 
       <!-- STEP 2 -->
-      <div class="step-card">
-        <span class="step-num">2</span>
-        <h4 class="step-title">Lengkapi Formulir & Dokumen</h4>
-        <p class="step-desc">
-          Isi formulir keberatan dan lampirkan salinan KTP, surat kuasa (jika diwakilkan), atau bukti badan hukum.
-          Dapatkan tanda bukti dari petugas.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(245,158,11,0.3);">2</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Lengkapi Formulir & Dokumen</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Isi formulir keberatan dan lampirkan salinan KTP, surat kuasa (jika diwakilkan), atau bukti badan hukum. Dapatkan tanda bukti dari petugas.
         </p>
-        <!-- Opsional tombol unduh (ganti path jika filenya ada)
-        <a class="btn btn-outline" href="<?= asset('file/Formulir_Keberatan.pdf') ?>" target="_blank" rel="noopener">
-          Unduh Formulir
-        </a>
-        -->
       </div>
 
       <!-- STEP 3 -->
-      <div class="step-card">
-        <span class="step-num">3</span>
-        <h4 class="step-title">Tanggapan & Lanjutan</h4>
-        <p class="step-desc">
-          Tanggapan diberikan paling lambat <strong>30 hari kerja</strong>. Jika tidak puas, ajukan sengketa ke
-          <strong>Komisi Informasi Pusat</strong> maksimal <strong>14 hari kerja</strong> setelah menerima tanggapan.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">3</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Tanggapan & Lanjutan</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Tanggapan diberikan paling lambat <strong style="color: #495057;">30 hari kerja</strong>. Jika tidak puas, ajukan sengketa ke <strong>Komisi Informasi Pusat</strong> maksimal <strong style="color: #495057;">14 hari kerja</strong> setelah menerima tanggapan.
         </p>
       </div>
     </div>
@@ -159,45 +151,42 @@ $sub = $_GET['sub'] ?? null;
 
 <?php elseif ($sub==='sengketa'): ?>
   <section class="card">
-    <h3>Tata Cara Penyelesaian Sengketa</h3>
+    <h3 style="color: #495057; margin-bottom: 16px;">Tata Cara Penyelesaian Sengketa</h3>
 
-    <div class="steps-grid">
+    <div class="steps-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 100%;">
       <!-- STEP 1 -->
-      <div class="step-card">
-        <span class="step-num">1</span>
-        <h4 class="step-title">Pengajuan Sengketa</h4>
-        <p class="step-desc">
-          Pemohon dapat mengajukan penyelesaian sengketa informasi publik ke Komisi Informasi
-          apabila tanggapan dari Atasan PPID tidak memuaskan.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #0ea5a3 0%, #0b7a79 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(14,165,163,0.3);">1</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Pengajuan Sengketa</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Pemohon dapat mengajukan penyelesaian sengketa informasi publik ke Komisi Informasi apabila tanggapan dari Atasan PPID tidak memuaskan.
         </p>
       </div>
 
       <!-- STEP 2 -->
-      <div class="step-card">
-        <span class="step-num">2</span>
-        <h4 class="step-title">Batas Waktu Pengajuan</h4>
-        <p class="step-desc">
-          Pengajuan sengketa harus dilakukan paling lambat <strong>14 hari kerja</strong>
-          setelah menerima tanggapan tertulis dari Atasan PPID.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(245,158,11,0.3);">2</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Batas Waktu Pengajuan</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Pengajuan sengketa harus dilakukan paling lambat <strong style="color: #495057;">14 hari kerja</strong> setelah menerima tanggapan tertulis dari Atasan PPID.
         </p>
       </div>
 
       <!-- STEP 3 -->
-      <div class="step-card">
-        <span class="step-num">3</span>
-        <h4 class="step-title">Proses oleh Komisi Informasi</h4>
-        <p class="step-desc">
-          Komisi Informasi wajib memulai proses penyelesaian melalui mediasi dan/atau ajudikasi nonlitigasi
-          dalam waktu <strong>14 hari kerja</strong> sejak menerima permohonan sengketa.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">3</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Proses oleh Komisi Informasi</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Komisi Informasi wajib memulai proses penyelesaian melalui mediasi dan/atau ajudikasi nonlitigasi dalam waktu <strong style="color: #495057;">14 hari kerja</strong> sejak menerima permohonan sengketa.
         </p>
       </div>
 
       <!-- STEP 4 -->
-      <div class="step-card">
-        <span class="step-num">4</span>
-        <h4 class="step-title">Batas Waktu Penyelesaian</h4>
-        <p class="step-desc">
-          Proses penyelesaian sengketa paling lambat diselesaikan dalam waktu <strong>100 hari kerja</strong>.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">4</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Batas Waktu Penyelesaian</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Proses penyelesaian sengketa paling lambat diselesaikan dalam waktu <strong style="color: #495057;">100 hari kerja</strong>.
         </p>
       </div>
     </div>
@@ -250,54 +239,50 @@ $sub = $_GET['sub'] ?? null;
 
 <?php elseif ($sub==='standar'): ?>
   <section class="card">
-    <h3>Standar Pengumuman Informasi</h3>
-    <p class="muted" style="margin-top:-2px">
+    <h3 style="color: #495057; margin-bottom: 16px;">Standar Pengumuman Informasi</h3>
+    <p style="color: #6c757d; margin-bottom: 24px; font-size: 13px; line-height: 1.5;">
       Berlaku untuk Kementerian Agama Pusat, PTKN, Kanwil Kemenag Provinsi, Kankemenag Kab/Kota,
       Balai Litbang Agama, Balai Diklat Keagamaan, dan KUA Kecamatan.
     </p>
 
-    <div class="steps-grid">
-      <!-- 1. Kriteria -->
-      <div class="step-card">
-        <span class="step-num">1</span>
-        <h4 class="step-title">Kriteria Pengumuman Informasi</h4>
-        <ul class="list">
-          <li>Menggunakan bahasa Indonesia yang baik dan benar</li>
-          <li>Mudah dipahami</li>
-          <li>Mempertimbangkan bahasa penduduk setempat</li>
-        </ul>
+    <div class="steps-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 100%;">
+      <!-- 1. Waktu -->
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(59,130,246,0.3);">1</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Waktu Pengumuman</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Pengumuman dilakukan <strong style="color: #495057;">paling lambat 10 hari kerja</strong> sejak Informasi Publik ditetapkan atau disimpulkan.
+        </p>
       </div>
 
-      <!-- 2. Media Penyebarluasan -->
-      <div class="step-card">
-        <span class="step-num">2</span>
-        <h4 class="step-title">Media Penyebarluasan Informasi</h4>
-        <ul class="list">
-          <li>Papan pengumuman</li>
-          <li>Laman resmi (website) PPID dan/atau Badan Publik</li>
-          <li>Media sosial PPID dan/atau Badan Publik</li>
-          <li>Portal Satu Data Indonesia</li>
-          <li>Aplikasi berbasis teknologi informasi</li>
+      <!-- 2. Media -->
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(245,158,11,0.3);">2</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Media Penyebarluasan Informasi</h4>
+        <ul style="color: #6c757d; font-size: 13px; line-height: 1.5; text-align: left; margin: 0; padding-left: 20px;">
+          <li style="margin-bottom: 8px;">Papan pengumuman</li>
+          <li style="margin-bottom: 8px;">Laman resmi (website) PPID dan/atau Badan Publik</li>
+          <li style="margin-bottom: 8px;">Media sosial PPID dan/atau Badan Publik</li>
+          <li style="margin-bottom: 8px;">Portal Satu Data Indonesia</li>
+          <li style="margin-bottom: 0;">Aplikasi berbasis teknologi informasi</li>
         </ul>
       </div>
 
       <!-- 3. Aksesibilitas -->
-      <div class="step-card">
-        <span class="step-num">3</span>
-        <h4 class="step-title">Aksesibilitas bagi Penyandang Disabilitas</h4>
-        <p class="step-desc">
-          Pengumuman dan penyebarluasan Informasi Publik wajib memperhatikan
-          aksesibilitas bagi penyandang disabilitas.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">3</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Aksesibilitas bagi Penyandang Disabilitas</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Pengumuman dan penyebarluasan Informasi Publik wajib memperhatikan aksesibilitas bagi penyandang disabilitas.
         </p>
       </div>
 
       <!-- 4. Format -->
-      <div class="step-card">
-        <span class="step-num">4</span>
-        <h4 class="step-title">Format Pengumuman</h4>
-        <p class="step-desc">
-          Pengumuman paling sedikit dilengkapi dengan <strong>audio</strong>,
-          <strong>visual</strong>, dan/atau <strong>braille</strong>.
+      <div class="step-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center;">
+        <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">4</div>
+        <h4 class="step-title" style="margin: 20px 0 10px; font-size: 16px; font-weight: 600; color: #495057;">Format Pengumuman</h4>
+        <p class="step-desc" style="color: #6c757d; line-height: 1.5; font-size: 13px; margin: 0;">
+          Pengumuman paling sedikit dilengkapi dengan <strong style="color: #495057;">audio</strong>, <strong style="color: #495057;">visual</strong>, dan/atau <strong style="color: #495057;">braille</strong>.
         </p>
       </div>
     </div>
